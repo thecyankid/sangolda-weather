@@ -13,6 +13,7 @@ xmlns:content="http://purl.org/rss/1.0/modules/content/">
 
 <language>en</language>
 
+
 <item>
 
 <title>Sangolda Weather</title>
@@ -27,7 +28,9 @@ xmlns:content="http://purl.org/rss/1.0/modules/content/">
 
 
 <html>
+
 <head>
+
 <meta charset="UTF-8">
 
 <title>Sangolda Weather</title>
@@ -35,30 +38,52 @@ xmlns:content="http://purl.org/rss/1.0/modules/content/">
 <style>
 
 body {
-    font-family: sans-serif;
-    font-size: 1.1em;
-    line-height: 1.5;
+    font-family: serif;
+    font-size: 1.05em;
+    line-height: 1.45;
+    margin: 0;
+    padding: 0;
 }
 
 h1 {
+    font-size: 1.5em;
     text-align: center;
+    margin-bottom: 0.2em;
+}
+
+.date {
+    text-align: center;
+    margin-bottom: 1.2em;
 }
 
 h2 {
-    margin-top: 25px;
+    font-size: 1.2em;
+    margin-top: 1.3em;
+    margin-bottom: 0.4em;
 }
 
-hr {
-    margin: 20px 0;
+.section {
+    border-top: 1px solid #888;
+    padding-top: 0.7em;
 }
 
-.current-temperature {
-    font-size: 1.6em;
+.row {
+    margin: 0.25em 0;
+}
+
+.day {
+    margin-top: 0.8em;
+    margin-bottom: 0.1em;
     font-weight: bold;
 }
 
-.forecast {
-    margin-bottom: 12px;
+.details {
+    margin-left: 1em;
+}
+
+.footer {
+    margin-top: 1.5em;
+    font-size: 0.8em;
 }
 
 </style>
@@ -67,175 +92,229 @@ hr {
 
 <body>
 
+
 <h1>SANGOLDA WEATHER</h1>
 
-<p style="text-align:center;">
-<b>Monday, 10 August 2026</b>
-</p>
+<div class="date">
+Monday, 10 August 2026
+</div>
 
-<hr>
 
-<h2>☁️ CURRENT</h2>
+<div class="section">
+
+<h2>CURRENT</h2>
 
 <p>
 
-<span class="current-temperature">
-🌡️ 24.3°C
-</span>
+<div class="row">
+<b>Temperature:</b>
+24.4°C
+</div>
 
-<br>
+<div class="row">
+<b>Feels like:</b>
+29.6°C
+</div>
 
-Feels like 29.5°C
+<div class="row">
+<b>Conditions:</b>
+Overcast
+</div>
 
-<br>
+<div class="row">
+<b>Humidity:</b>
+95%
+</div>
 
-☁️ Overcast
-
-<br>
-
-💧 Humidity 96%
-
-<br>
-
-💨 Wind 4.1 km/h
+<div class="row">
+<b>Wind:</b>
+3.7 km/h
+</div>
 
 </p>
 
-<hr>
+</div>
+
+
+<div class="section">
 
 <h2>TODAY</h2>
 
 <p>
 
-<b>
-28.8°
-/
-23.9°
-</b>
+<div class="row">
+<b>High:</b>
+28.8°C
+</div>
 
-<br>
+<div class="row">
+<b>Low:</b>
+23.9°C
+</div>
 
-🌧️ Rain: 100%
+<div class="row">
+<b>Rain probability:</b>
+100%
+</div>
+
+<div class="row">
+<b>Expected rain:</b>
+11.5 mm
+</div>
 
 </p>
 
-<hr>
+</div>
+
+
+<div class="section">
 
 <h2>NEXT 5 DAYS</h2>
 
 
-<div class="forecast">
+<div class="day">
 
-<b>Tue</b>
-&nbsp;&nbsp;
-27.4°/24.4°
-&nbsp;&nbsp;
-🌦️
-
-<br>
-
-<small>
-Rain showers · Rain 100%
-</small>
+Tue &nbsp;&nbsp; 27.4° / 24.4°C
 
 </div>
 
-<div class="forecast">
+<div class="details">
 
-<b>Wed</b>
-&nbsp;&nbsp;
-27.4°/24.5°
-&nbsp;&nbsp;
-🌦️
+Rain showers
 
 <br>
 
-<small>
-Moderate rain showers · Rain 100%
-</small>
-
-</div>
-
-<div class="forecast">
-
-<b>Thu</b>
-&nbsp;&nbsp;
-27.6°/24.4°
-&nbsp;&nbsp;
-🌦️
+Rain probability: 100%
 
 <br>
 
-<small>
-Rain showers · Rain 100%
-</small>
-
-</div>
-
-<div class="forecast">
-
-<b>Fri</b>
-&nbsp;&nbsp;
-26.9°/23.9°
-&nbsp;&nbsp;
-🌦️
-
-<br>
-
-<small>
-Rain showers · Rain 100%
-</small>
-
-</div>
-
-<div class="forecast">
-
-<b>Sat</b>
-&nbsp;&nbsp;
-28.4°/23.9°
-&nbsp;&nbsp;
-🌦️
-
-<br>
-
-<small>
-Rain showers · Rain 100%
-</small>
+Expected rain: 12.2 mm
 
 </div>
 
 
-<hr>
+
+<div class="day">
+
+Wed &nbsp;&nbsp; 27.4° / 24.5°C
+
+</div>
+
+<div class="details">
+
+Moderate rain showers
+
+<br>
+
+Rain probability: 100%
+
+<br>
+
+Expected rain: 17.2 mm
+
+</div>
+
+
+
+<div class="day">
+
+Thu &nbsp;&nbsp; 27.6° / 24.4°C
+
+</div>
+
+<div class="details">
+
+Rain showers
+
+<br>
+
+Rain probability: 100%
+
+<br>
+
+Expected rain: 8.8 mm
+
+</div>
+
+
+
+<div class="day">
+
+Fri &nbsp;&nbsp; 26.9° / 23.9°C
+
+</div>
+
+<div class="details">
+
+Rain showers
+
+<br>
+
+Rain probability: 100%
+
+<br>
+
+Expected rain: 13.6 mm
+
+</div>
+
+
+
+<div class="day">
+
+Sat &nbsp;&nbsp; 28.4° / 23.9°C
+
+</div>
+
+<div class="details">
+
+Rain showers
+
+<br>
+
+Rain probability: 100%
+
+<br>
+
+Expected rain: 11.1 mm
+
+</div>
+
+
+
+</div>
+
+
+<div class="section">
 
 <h2>SUN</h2>
 
 <p>
 
-🌅 Sunrise: 06:18
+<b>Sunrise:</b> 06:18
 
 <br>
 
-🌇 Sunset: 19:01
+<b>Sunset:</b> 19:01
 
 </p>
 
-<hr>
+</div>
 
-<p>
 
-<small>
+<div class="footer">
 
-Updated: 10 August 2026, 06:40 PM
+Updated: 10 August 2026, 06:47 PM
 
 <br><br>
 
 Weather data provided by Open-Meteo.
 
-</small>
+</div>
 
-</p>
 
 </body>
+
 </html>
 
 
@@ -243,11 +322,14 @@ Weather data provided by Open-Meteo.
 
 </content:encoded>
 
-<pubDate>Mon, 10 Aug 2026 18:40:38 GMT</pubDate>
+<pubDate>Mon, 10 Aug 2026 18:47:40 GMT</pubDate>
 
-<guid isPermaLink="false">Sangolda-Weather</guid>
+<guid isPermaLink="false">
+Sangolda-Weather
+</guid>
 
 </item>
+
 
 </channel>
 
