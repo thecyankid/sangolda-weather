@@ -2,7 +2,7 @@ name: Update Sangolda Weather
 
 on:
   schedule:
-    - cron: "30 3 * * *"
+    - cron: "30 * * * *"
   workflow_dispatch:
 
 permissions:
