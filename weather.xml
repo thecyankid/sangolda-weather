@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+xmlns:content="http://purl.org/rss/1.0/modules/content/">
+
+<channel>
+
+<title>Sangolda Weather</title>
+
+<link>https://open-meteo.com/</link>
+
+<description>Current conditions and 7-day forecast for Sangolda, Goa.</description>
+
+<item>
+
+<title>Sangolda Weather</title>
+
+<description>Current conditions and 7-day forecast for Sangolda, Goa.</description>
+
+<content:encoded>
+<![CDATA[
+
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Sangolda Weather</title>
+</head>
+<body>
+
+<h1>Sangolda Weather</h1>
+
+<p><b>Updated:</b> 10 August 2026, 06:16 PM</p>
+
+<hr>
+
+<h2>Current Conditions</h2>
+
+<p><b>Temperature:</b> 24.2°C</p>
+<p><b>Feels like:</b> 29.4°C</p>
+<p><b>Conditions:</b> Overcast</p>
+<p><b>Humidity:</b> 97%</p>
+<p><b>Wind:</b> 4.2 km/h</p>
+<p><b>Precipitation:</b> 0.0 mm</p>
+
+<hr>
+
+<h2>7-Day Forecast</h2>
+
+<h3>Monday, 10 August</h3>
+<p>
+<b>Rain showers</b><br>
+High: 28.8°C<br>
+Low: 23.9°C<br>
+Rain probability: 100%<br>
+Rain: 11.5 mm<br>
+Sunrise: 06:18<br>
+Sunset: 19:01
+</p>
+
+<h3>Tuesday, 11 August</h3>
+<p>
+<b>Rain showers</b><br>
+High: 27.4°C<br>
+Low: 24.4°C<br>
+Rain probability: 100%<br>
+Rain: 12.2 mm<br>
+Sunrise: 06:18<br>
+Sunset: 19:00
+</p>
+
+<h3>Wednesday, 12 August</h3>
+<p>
+<b>Moderate rain showers</b><br>
+High: 27.4°C<br>
+Low: 24.5°C<br>
+Rain probability: 100%<br>
+Rain: 17.2 mm<br>
+Sunrise: 06:19<br>
+Sunset: 19:00
+</p>
+
+<h3>Thursday, 13 August</h3>
+<p>
+<b>Rain showers</b><br>
+High: 27.6°C<br>
+Low: 24.4°C<br>
+Rain probability: 100%<br>
+Rain: 8.8 mm<br>
+Sunrise: 06:19<br>
+Sunset: 18:59
+</p>
+
+<h3>Friday, 14 August</h3>
+<p>
+<b>Rain showers</b><br>
+High: 26.9°C<br>
+Low: 23.9°C<br>
+Rain probability: 100%<br>
+Rain: 13.6 mm<br>
+Sunrise: 06:19<br>
+Sunset: 18:59
+</p>
+
+<h3>Saturday, 15 August</h3>
+<p>
+<b>Rain showers</b><br>
+High: 28.4°C<br>
+Low: 23.9°C<br>
+Rain probability: 100%<br>
+Rain: 11.1 mm<br>
+Sunrise: 06:19<br>
+Sunset: 18:58
+</p>
+
+<h3>Sunday, 16 August</h3>
+<p>
+<b>Rain showers</b><br>
+High: 27.5°C<br>
+Low: 24.9°C<br>
+Rain probability: 98%<br>
+Rain: 19.5 mm<br>
+Sunrise: 06:19<br>
+Sunset: 18:58
+</p>
+
+<hr>
+<p><small>
+Weather data provided by Open-Meteo.
+</small></p>
+
+</body>
+</html>
+
+]]>
+</content:encoded>
+
+<pubDate>Mon, 10 Aug 2026 18:16:47 GMT</pubDate>
+
+<guid>Sangolda-Weather</guid>
+
+</item>
+
+</channel>
+</rss>
