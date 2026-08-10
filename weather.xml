@@ -13,7 +13,6 @@ xmlns:content="http://purl.org/rss/1.0/modules/content/">
 
 <language>en</language>
 
-
 <item>
 
 <title>Sangolda Weather</title>
@@ -39,51 +38,64 @@ xmlns:content="http://purl.org/rss/1.0/modules/content/">
 
 body {
     font-family: serif;
-    font-size: 1.05em;
-    line-height: 1.45;
+    font-size: 0.95em;
+    line-height: 1.25;
     margin: 0;
     padding: 0;
 }
 
 h1 {
-    font-size: 1.5em;
+    font-size: 1.35em;
     text-align: center;
-    margin-bottom: 0.2em;
+    margin: 0 0 0.15em 0;
 }
 
 .date {
     text-align: center;
-    margin-bottom: 1.2em;
+    margin-bottom: 0.55em;
 }
 
 h2 {
-    font-size: 1.2em;
-    margin-top: 1.3em;
-    margin-bottom: 0.4em;
+    font-size: 1.05em;
+    margin: 0.65em 0 0.25em 0;
+    border-bottom: 1px solid #777;
+    padding-bottom: 0.15em;
 }
 
-.section {
-    border-top: 1px solid #888;
-    padding-top: 0.7em;
+p {
+    margin: 0.2em 0;
 }
 
-.row {
-    margin: 0.25em 0;
+.current {
+    text-align: center;
 }
 
-.day {
-    margin-top: 0.8em;
-    margin-bottom: 0.1em;
-    font-weight: bold;
+.today {
+    text-align: center;
 }
 
-.details {
-    margin-left: 1em;
+.forecast {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0.25em;
+    font-size: 0.95em;
+}
+
+.forecast th {
+    border-bottom: 1px solid #777;
+    padding: 0.2em;
+    text-align: center;
+}
+
+.forecast td {
+    padding: 0.18em 0.2em;
+    text-align: center;
 }
 
 .footer {
-    margin-top: 1.5em;
-    font-size: 0.8em;
+    margin-top: 0.65em;
+    text-align: center;
+    font-size: 0.75em;
 }
 
 </style>
@@ -96,219 +108,133 @@ h2 {
 <h1>SANGOLDA WEATHER</h1>
 
 <div class="date">
-Monday, 10 August 2026
+<b>Monday, 10 August 2026</b>
 </div>
 
-
-<div class="section">
 
 <h2>CURRENT</h2>
 
+<div class="current">
+
 <p>
+<b>24.4°C</b>
+&nbsp;&nbsp;|&nbsp;&nbsp;
+Feels 29.6°C
+</p>
 
-<div class="row">
-<b>Temperature:</b>
-24.4°C
-</div>
-
-<div class="row">
-<b>Feels like:</b>
-29.6°C
-</div>
-
-<div class="row">
-<b>Conditions:</b>
+<p>
 Overcast
-</div>
-
-<div class="row">
-<b>Humidity:</b>
-95%
-</div>
-
-<div class="row">
-<b>Wind:</b>
-3.7 km/h
-</div>
-
+&nbsp;&nbsp;|&nbsp;&nbsp;
+Humidity 95%
+&nbsp;&nbsp;|&nbsp;&nbsp;
+Wind 3.7 km/h
 </p>
 
 </div>
 
-
-<div class="section">
 
 <h2>TODAY</h2>
 
+<div class="today">
+
 <p>
+<b>
+High 28.8°C
+&nbsp;&nbsp;&nbsp;
+Low 23.9°C
+</b>
+</p>
 
-<div class="row">
-<b>High:</b>
-28.8°C
-</div>
-
-<div class="row">
-<b>Low:</b>
-23.9°C
-</div>
-
-<div class="row">
-<b>Rain probability:</b>
-100%
-</div>
-
-<div class="row">
-<b>Expected rain:</b>
-11.5 mm
-</div>
-
+<p>
+Rain probability:
+<b>100%</b>
 </p>
 
 </div>
 
-
-<div class="section">
 
 <h2>NEXT 5 DAYS</h2>
 
+<table class="forecast">
 
-<div class="day">
+<tr>
+<th>DAY</th>
+<th>HIGH</th>
+<th>LOW</th>
+<th>RAIN</th>
+</tr>
 
-Tue &nbsp;&nbsp; 27.4° / 24.4°C
+<tr>
 
-</div>
+<td><b>Tue</b></td>
 
-<div class="details">
+<td>27.4°</td>
 
-Rain showers
+<td>24.4°</td>
 
-<br>
+<td>100%</td>
 
-Rain probability: 100%
+</tr>
 
-<br>
+<tr>
 
-Expected rain: 12.2 mm
+<td><b>Wed</b></td>
 
-</div>
+<td>27.4°</td>
 
+<td>24.5°</td>
 
+<td>100%</td>
 
-<div class="day">
+</tr>
 
-Wed &nbsp;&nbsp; 27.4° / 24.5°C
+<tr>
 
-</div>
+<td><b>Thu</b></td>
 
-<div class="details">
+<td>27.6°</td>
 
-Moderate rain showers
+<td>24.4°</td>
 
-<br>
+<td>100%</td>
 
-Rain probability: 100%
+</tr>
 
-<br>
+<tr>
 
-Expected rain: 17.2 mm
+<td><b>Fri</b></td>
 
-</div>
+<td>26.9°</td>
 
+<td>23.9°</td>
 
+<td>100%</td>
 
-<div class="day">
+</tr>
 
-Thu &nbsp;&nbsp; 27.6° / 24.4°C
+<tr>
 
-</div>
+<td><b>Sat</b></td>
 
-<div class="details">
+<td>28.4°</td>
 
-Rain showers
+<td>23.9°</td>
 
-<br>
+<td>100%</td>
 
-Rain probability: 100%
+</tr>
 
-<br>
 
-Expected rain: 8.8 mm
-
-</div>
-
-
-
-<div class="day">
-
-Fri &nbsp;&nbsp; 26.9° / 23.9°C
-
-</div>
-
-<div class="details">
-
-Rain showers
-
-<br>
-
-Rain probability: 100%
-
-<br>
-
-Expected rain: 13.6 mm
-
-</div>
-
-
-
-<div class="day">
-
-Sat &nbsp;&nbsp; 28.4° / 23.9°C
-
-</div>
-
-<div class="details">
-
-Rain showers
-
-<br>
-
-Rain probability: 100%
-
-<br>
-
-Expected rain: 11.1 mm
-
-</div>
-
-
-
-</div>
-
-
-<div class="section">
-
-<h2>SUN</h2>
-
-<p>
-
-<b>Sunrise:</b> 06:18
-
-<br>
-
-<b>Sunset:</b> 19:01
-
-</p>
-
-</div>
+</table>
 
 
 <div class="footer">
 
-Updated: 10 August 2026, 06:47 PM
+Updated 10 Aug 2026, 06:50 PM
 
-<br><br>
+<br>
 
-Weather data provided by Open-Meteo.
+Weather: Open-Meteo
 
 </div>
 
@@ -322,14 +248,11 @@ Weather data provided by Open-Meteo.
 
 </content:encoded>
 
-<pubDate>Mon, 10 Aug 2026 18:47:40 GMT</pubDate>
+<pubDate>Mon, 10 Aug 2026 18:50:09 GMT</pubDate>
 
-<guid isPermaLink="false">
-Sangolda-Weather
-</guid>
+<guid isPermaLink="false">Sangolda-Weather</guid>
 
 </item>
-
 
 </channel>
 
