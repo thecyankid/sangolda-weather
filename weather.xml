@@ -14,6 +14,8 @@ xmlns:content="http://purl.org/rss/1.0/modules/content/">
 
 <title>Sangolda Weather</title>
 
+<link>https://open-meteo.com/</link>
+
 <description>Current conditions and 7-day forecast for Sangolda, Goa.</description>
 
 <content:encoded>
@@ -28,17 +30,17 @@ xmlns:content="http://purl.org/rss/1.0/modules/content/">
 
 <h1>Sangolda Weather</h1>
 
-<p><b>Updated:</b> 10 August 2026, 06:16 PM</p>
+<p><b>Updated:</b> 10 August 2026, 06:33 PM</p>
 
 <hr>
 
 <h2>Current Conditions</h2>
 
-<p><b>Temperature:</b> 24.2°C</p>
-<p><b>Feels like:</b> 29.4°C</p>
+<p><b>Temperature:</b> 24.3°C</p>
+<p><b>Feels like:</b> 29.5°C</p>
 <p><b>Conditions:</b> Overcast</p>
-<p><b>Humidity:</b> 97%</p>
-<p><b>Wind:</b> 4.2 km/h</p>
+<p><b>Humidity:</b> 96%</p>
+<p><b>Wind:</b> 4.1 km/h</p>
 <p><b>Precipitation:</b> 0.0 mm</p>
 
 <hr>
@@ -133,7 +135,7 @@ Weather data provided by Open-Meteo.
 ]]>
 </content:encoded>
 
-<pubDate>Mon, 10 Aug 2026 18:16:47 GMT</pubDate>
+<pubDate>Mon, 10 Aug 2026 18:33:50 GMT</pubDate>
 
 <guid>Sangolda-Weather</guid>
 
