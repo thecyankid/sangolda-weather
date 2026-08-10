@@ -3,82 +3,94 @@ import html
 import urllib.request
 from datetime import datetime, timezone
 
-# Sangolda, Goa
+# =========================================================
+# SANGOLDA, GOA
+# =========================================================
+
 LAT = 15.53085
 LON = 73.82465
+
+
+# =========================================================
+# OPEN-METEO API
+# =========================================================
 
 API = (
     "https://api.open-meteo.com/v1/forecast?"
     f"latitude={LAT}&longitude={LON}"
-    "&current=temperature_2m,relative_humidity_2m,"
-    "apparent_temperature,precipitation,weather_code,"
+    "&current="
+    "temperature_2m,"
+    "relative_humidity_2m,"
+    "apparent_temperature,"
+    "precipitation,"
+    "weather_code,"
     "wind_speed_10m"
-    "&daily=weather_code,temperature_2m_max,temperature_2m_min,"
-    "precipitation_probability_max,precipitation_sum,"
-    "sunrise,sunset"
+    "&daily="
+    "weather_code,"
+    "temperature_2m_max,"
+    "temperature_2m_min,"
+    "precipitation_probability_max,"
+    "precipitation_sum,"
+    "sunrise,"
+    "sunset"
     "&timezone=Asia%2FKolkata"
     "&forecast_days=7"
 )
 
 
+# =========================================================
+# WEATHER CODE → TEXT
+# =========================================================
+
 def weather_description(code):
+
     codes = {
         0: "Clear sky",
         1: "Mainly clear",
         2: "Partly cloudy",
         3: "Overcast",
+
         45: "Fog",
-        48: "Depositing rime fog",
+        48: "Fog",
+
         51: "Light drizzle",
-        53: "Moderate drizzle",
-        55: "Dense drizzle",
+        53: "Drizzle",
+        55: "Heavy drizzle",
+
         56: "Freezing drizzle",
         57: "Heavy freezing drizzle",
-        61: "Slight rain",
+
+        61: "Light rain",
         63: "Moderate rain",
         65: "Heavy rain",
+
         66: "Freezing rain",
         67: "Heavy freezing rain",
-        71: "Slight snow",
+
+        71: "Light snow",
         73: "Moderate snow",
         75: "Heavy snow",
+
         77: "Snow grains",
+
         80: "Rain showers",
         81: "Moderate rain showers",
         82: "Heavy rain showers",
+
         85: "Snow showers",
         86: "Heavy snow showers",
+
         95: "Thunderstorm",
-        96: "Thunderstorm with slight hail",
+        96: "Thunderstorm with hail",
         99: "Thunderstorm with heavy hail",
     }
 
     return codes.get(code, "Unknown")
 
 
-def weather_emoji(code):
-    if code == 0:
-        return "☀️"
-    elif code in (1, 2):
-        return "🌤️"
-    elif code == 3:
-        return "☁️"
-    elif code in (45, 48):
-        return "🌫️"
-    elif code in (51, 53, 55, 56, 57,
-                  61, 63, 65, 66, 67):
-        return "🌧️"
-    elif code in (80, 81, 82):
-        return "🌦️"
-    elif code in (95, 96, 99):
-        return "⛈️"
-    else:
-        return "🌥️"
-
-
-# ---------------------------------------------------------
-# Download weather data
-# ---------------------------------------------------------
+# =========================================================
+# DOWNLOAD WEATHER
+# =========================================================
 
 with urllib.request.urlopen(API) as response:
     data = json.load(response)
@@ -88,36 +100,44 @@ current = data["current"]
 daily = data["daily"]
 
 
-# ---------------------------------------------------------
-# Current date/time
-# ---------------------------------------------------------
+# =========================================================
+# DATE
+# =========================================================
 
-updated = datetime.now().strftime("%d %B %Y, %I:%M %p")
-
-today_date = datetime.fromisoformat(
+today = datetime.fromisoformat(
     daily["time"][0]
 )
 
-today_name = today_date.strftime("%A")
-today_date_formatted = today_date.strftime("%d %B %Y")
+today_name = today.strftime("%A")
+today_date = today.strftime("%d %B %Y")
+
+updated = datetime.now().strftime(
+    "%d %B %Y, %I:%M %p"
+)
 
 
-# ---------------------------------------------------------
-# Current weather
-# ---------------------------------------------------------
+# =========================================================
+# CURRENT CONDITIONS
+# =========================================================
 
-current_code = current["weather_code"]
-current_description = weather_description(current_code)
-current_icon = weather_emoji(current_code)
+current_condition = weather_description(
+    current["weather_code"]
+)
 
 
-# ---------------------------------------------------------
-# Build HTML content
-# ---------------------------------------------------------
+# =========================================================
+# HTML CONTENT
+#
+# Deliberately simple HTML because KOReader converts
+# this RSS article into EPUB and we want it to look good
+# on a 6-inch Kindle screen.
+# =========================================================
 
 content = f"""
 <html>
+
 <head>
+
 <meta charset="UTF-8">
 
 <title>Sangolda Weather</title>
@@ -125,30 +145,52 @@ content = f"""
 <style>
 
 body {{
-    font-family: sans-serif;
-    font-size: 1.1em;
-    line-height: 1.5;
+    font-family: serif;
+    font-size: 1.05em;
+    line-height: 1.45;
+    margin: 0;
+    padding: 0;
 }}
 
 h1 {{
+    font-size: 1.5em;
     text-align: center;
+    margin-bottom: 0.2em;
+}}
+
+.date {{
+    text-align: center;
+    margin-bottom: 1.2em;
 }}
 
 h2 {{
-    margin-top: 25px;
+    font-size: 1.2em;
+    margin-top: 1.3em;
+    margin-bottom: 0.4em;
 }}
 
-hr {{
-    margin: 20px 0;
+.section {{
+    border-top: 1px solid #888;
+    padding-top: 0.7em;
 }}
 
-.current-temperature {{
-    font-size: 1.6em;
+.row {{
+    margin: 0.25em 0;
+}}
+
+.day {{
+    margin-top: 0.8em;
+    margin-bottom: 0.1em;
     font-weight: bold;
 }}
 
-.forecast {{
-    margin-bottom: 12px;
+.details {{
+    margin-left: 1em;
+}}
+
+.footer {{
+    margin-top: 1.5em;
+    font-size: 0.8em;
 }}
 
 </style>
@@ -157,68 +199,90 @@ hr {{
 
 <body>
 
+
 <h1>SANGOLDA WEATHER</h1>
 
-<p style="text-align:center;">
-<b>{today_name}, {today_date_formatted}</b>
-</p>
+<div class="date">
+{today_name}, {today_date}
+</div>
 
-<hr>
 
-<h2>{current_icon} CURRENT</h2>
+<div class="section">
+
+<h2>CURRENT</h2>
 
 <p>
 
-<span class="current-temperature">
-🌡️ {current["temperature_2m"]}°C
-</span>
+<div class="row">
+<b>Temperature:</b>
+{current["temperature_2m"]}°C
+</div>
 
-<br>
+<div class="row">
+<b>Feels like:</b>
+{current["apparent_temperature"]}°C
+</div>
 
-Feels like {current["apparent_temperature"]}°C
+<div class="row">
+<b>Conditions:</b>
+{current_condition}
+</div>
 
-<br>
+<div class="row">
+<b>Humidity:</b>
+{current["relative_humidity_2m"]}%
+</div>
 
-{current_icon} {current_description}
-
-<br>
-
-💧 Humidity {current["relative_humidity_2m"]}%
-
-<br>
-
-💨 Wind {current["wind_speed_10m"]} km/h
+<div class="row">
+<b>Wind:</b>
+{current["wind_speed_10m"]} km/h
+</div>
 
 </p>
 
-<hr>
+</div>
+
+
+<div class="section">
 
 <h2>TODAY</h2>
 
 <p>
 
-<b>
-{daily["temperature_2m_max"][0]}°
-/
-{daily["temperature_2m_min"][0]}°
-</b>
+<div class="row">
+<b>High:</b>
+{daily["temperature_2m_max"][0]}°C
+</div>
 
-<br>
+<div class="row">
+<b>Low:</b>
+{daily["temperature_2m_min"][0]}°C
+</div>
 
-🌧️ Rain: {daily["precipitation_probability_max"][0]}%
+<div class="row">
+<b>Rain probability:</b>
+{daily["precipitation_probability_max"][0]}%
+</div>
+
+<div class="row">
+<b>Expected rain:</b>
+{daily["precipitation_sum"][0]} mm
+</div>
 
 </p>
 
-<hr>
+</div>
+
+
+<div class="section">
 
 <h2>NEXT 5 DAYS</h2>
-
 """
 
 
-# ---------------------------------------------------------
-# 5-day forecast
-# ---------------------------------------------------------
+# =========================================================
+# 5-DAY FORECAST
+# =========================================================
 
 for i in range(1, 6):
 
@@ -235,34 +299,42 @@ for i in range(1, 6):
         "precipitation_probability_max"
     ][i]
 
-    code = daily["weather_code"][i]
+    rain_amount = daily[
+        "precipitation_sum"
+    ][i]
 
-    icon = weather_emoji(code)
-
-    description = weather_description(code)
+    condition = weather_description(
+        daily["weather_code"][i]
+    )
 
     content += f"""
-<div class="forecast">
 
-<b>{day_name}</b>
-&nbsp;&nbsp;
-{high}°/{low}°
-&nbsp;&nbsp;
-{icon}
+<div class="day">
+
+{day_name} &nbsp;&nbsp; {high}° / {low}°C
+
+</div>
+
+<div class="details">
+
+{condition}
 
 <br>
 
-<small>
-{description} · Rain {rain_probability}%
-</small>
+Rain probability: {rain_probability}%
+
+<br>
+
+Expected rain: {rain_amount} mm
 
 </div>
+
 """
 
 
-# ---------------------------------------------------------
-# Sunrise / sunset
-# ---------------------------------------------------------
+# =========================================================
+# SUNRISE / SUNSET
+# =========================================================
 
 sunrise = daily["sunrise"][0][11:16]
 sunset = daily["sunset"][0][11:16]
@@ -270,25 +342,27 @@ sunset = daily["sunset"][0][11:16]
 
 content += f"""
 
-<hr>
+</div>
+
+
+<div class="section">
 
 <h2>SUN</h2>
 
 <p>
 
-🌅 Sunrise: {sunrise}
+<b>Sunrise:</b> {sunrise}
 
 <br>
 
-🌇 Sunset: {sunset}
+<b>Sunset:</b> {sunset}
 
 </p>
 
-<hr>
+</div>
 
-<p>
 
-<small>
+<div class="footer">
 
 Updated: {updated}
 
@@ -296,18 +370,18 @@ Updated: {updated}
 
 Weather data provided by Open-Meteo.
 
-</small>
+</div>
 
-</p>
 
 </body>
+
 </html>
 """
 
 
-# ---------------------------------------------------------
-# RSS feed
-# ---------------------------------------------------------
+# =========================================================
+# RSS METADATA
+# =========================================================
 
 title = "Sangolda Weather"
 
@@ -316,19 +390,13 @@ description = (
     "for Sangolda, Goa."
 )
 
-
-# Escape RSS metadata
 rss_title = html.escape(title)
 rss_description = html.escape(description)
 
 
-# ---------------------------------------------------------
-# Generate RSS XML
-#
-# IMPORTANT:
-# The <link> inside <item> is required by KOReader's
-# RSS parser.
-# ---------------------------------------------------------
+# =========================================================
+# RSS PUBLICATION DATE
+# =========================================================
 
 now = datetime.now(timezone.utc)
 
@@ -336,6 +404,13 @@ pub_date = now.strftime(
     "%a, %d %b %Y %H:%M:%S GMT"
 )
 
+
+# =========================================================
+# RSS XML
+#
+# IMPORTANT:
+# KOReader requires <link> inside <item>.
+# =========================================================
 
 rss = f'''<?xml version="1.0" encoding="UTF-8"?>
 
@@ -351,6 +426,7 @@ xmlns:content="http://purl.org/rss/1.0/modules/content/">
 <description>{rss_description}</description>
 
 <language>en</language>
+
 
 <item>
 
@@ -372,9 +448,12 @@ xmlns:content="http://purl.org/rss/1.0/modules/content/">
 
 <pubDate>{pub_date}</pubDate>
 
-<guid isPermaLink="false">Sangolda-Weather</guid>
+<guid isPermaLink="false">
+Sangolda-Weather
+</guid>
 
 </item>
+
 
 </channel>
 
@@ -382,9 +461,9 @@ xmlns:content="http://purl.org/rss/1.0/modules/content/">
 '''
 
 
-# ---------------------------------------------------------
-# Save RSS file
-# ---------------------------------------------------------
+# =========================================================
+# WRITE RSS FILE
+# =========================================================
 
 with open(
     "weather.xml",
@@ -395,4 +474,6 @@ with open(
     f.write(rss)
 
 
-print("Sangolda weather RSS generated successfully.")
+print(
+    "Sangolda weather RSS generated successfully."
+)
