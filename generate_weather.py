@@ -126,6 +126,8 @@ xmlns:content="http://purl.org/rss/1.0/modules/content/">
 
 <title>{html.escape(title)}</title>
 
+<link>https://open-meteo.com/</link>
+
 <description>{html.escape(description)}</description>
 
 <content:encoded>
