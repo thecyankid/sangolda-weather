@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <rss version="2.0"
 xmlns:content="http://purl.org/rss/1.0/modules/content/">
 
@@ -8,7 +9,9 @@ xmlns:content="http://purl.org/rss/1.0/modules/content/">
 
 <link>https://open-meteo.com/</link>
 
-<description>Current conditions and 7-day forecast for Sangolda, Goa.</description>
+<description>Current weather and 5-day forecast for Sangolda, Goa.</description>
+
+<language>en</language>
 
 <item>
 
@@ -16,130 +19,236 @@ xmlns:content="http://purl.org/rss/1.0/modules/content/">
 
 <link>https://open-meteo.com/</link>
 
-<description>Current conditions and 7-day forecast for Sangolda, Goa.</description>
+<description>Current weather and 5-day forecast for Sangolda, Goa.</description>
 
 <content:encoded>
+
 <![CDATA[
+
 
 <html>
 <head>
 <meta charset="UTF-8">
+
 <title>Sangolda Weather</title>
+
+<style>
+
+body {
+    font-family: sans-serif;
+    font-size: 1.1em;
+    line-height: 1.5;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    margin-top: 25px;
+}
+
+hr {
+    margin: 20px 0;
+}
+
+.current-temperature {
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+.forecast {
+    margin-bottom: 12px;
+}
+
+</style>
+
 </head>
+
 <body>
 
-<h1>Sangolda Weather</h1>
+<h1>SANGOLDA WEATHER</h1>
 
-<p><b>Updated:</b> 10 August 2026, 06:33 PM</p>
-
-<hr>
-
-<h2>Current Conditions</h2>
-
-<p><b>Temperature:</b> 24.3°C</p>
-<p><b>Feels like:</b> 29.5°C</p>
-<p><b>Conditions:</b> Overcast</p>
-<p><b>Humidity:</b> 96%</p>
-<p><b>Wind:</b> 4.1 km/h</p>
-<p><b>Precipitation:</b> 0.0 mm</p>
-
-<hr>
-
-<h2>7-Day Forecast</h2>
-
-<h3>Monday, 10 August</h3>
-<p>
-<b>Rain showers</b><br>
-High: 28.8°C<br>
-Low: 23.9°C<br>
-Rain probability: 100%<br>
-Rain: 11.5 mm<br>
-Sunrise: 06:18<br>
-Sunset: 19:01
-</p>
-
-<h3>Tuesday, 11 August</h3>
-<p>
-<b>Rain showers</b><br>
-High: 27.4°C<br>
-Low: 24.4°C<br>
-Rain probability: 100%<br>
-Rain: 12.2 mm<br>
-Sunrise: 06:18<br>
-Sunset: 19:00
-</p>
-
-<h3>Wednesday, 12 August</h3>
-<p>
-<b>Moderate rain showers</b><br>
-High: 27.4°C<br>
-Low: 24.5°C<br>
-Rain probability: 100%<br>
-Rain: 17.2 mm<br>
-Sunrise: 06:19<br>
-Sunset: 19:00
-</p>
-
-<h3>Thursday, 13 August</h3>
-<p>
-<b>Rain showers</b><br>
-High: 27.6°C<br>
-Low: 24.4°C<br>
-Rain probability: 100%<br>
-Rain: 8.8 mm<br>
-Sunrise: 06:19<br>
-Sunset: 18:59
-</p>
-
-<h3>Friday, 14 August</h3>
-<p>
-<b>Rain showers</b><br>
-High: 26.9°C<br>
-Low: 23.9°C<br>
-Rain probability: 100%<br>
-Rain: 13.6 mm<br>
-Sunrise: 06:19<br>
-Sunset: 18:59
-</p>
-
-<h3>Saturday, 15 August</h3>
-<p>
-<b>Rain showers</b><br>
-High: 28.4°C<br>
-Low: 23.9°C<br>
-Rain probability: 100%<br>
-Rain: 11.1 mm<br>
-Sunrise: 06:19<br>
-Sunset: 18:58
-</p>
-
-<h3>Sunday, 16 August</h3>
-<p>
-<b>Rain showers</b><br>
-High: 27.5°C<br>
-Low: 24.9°C<br>
-Rain probability: 98%<br>
-Rain: 19.5 mm<br>
-Sunrise: 06:19<br>
-Sunset: 18:58
+<p style="text-align:center;">
+<b>Monday, 10 August 2026</b>
 </p>
 
 <hr>
-<p><small>
+
+<h2>☁️ CURRENT</h2>
+
+<p>
+
+<span class="current-temperature">
+🌡️ 24.3°C
+</span>
+
+<br>
+
+Feels like 29.5°C
+
+<br>
+
+☁️ Overcast
+
+<br>
+
+💧 Humidity 96%
+
+<br>
+
+💨 Wind 4.1 km/h
+
+</p>
+
+<hr>
+
+<h2>TODAY</h2>
+
+<p>
+
+<b>
+28.8°
+/
+23.9°
+</b>
+
+<br>
+
+🌧️ Rain: 100%
+
+</p>
+
+<hr>
+
+<h2>NEXT 5 DAYS</h2>
+
+
+<div class="forecast">
+
+<b>Tue</b>
+&nbsp;&nbsp;
+27.4°/24.4°
+&nbsp;&nbsp;
+🌦️
+
+<br>
+
+<small>
+Rain showers · Rain 100%
+</small>
+
+</div>
+
+<div class="forecast">
+
+<b>Wed</b>
+&nbsp;&nbsp;
+27.4°/24.5°
+&nbsp;&nbsp;
+🌦️
+
+<br>
+
+<small>
+Moderate rain showers · Rain 100%
+</small>
+
+</div>
+
+<div class="forecast">
+
+<b>Thu</b>
+&nbsp;&nbsp;
+27.6°/24.4°
+&nbsp;&nbsp;
+🌦️
+
+<br>
+
+<small>
+Rain showers · Rain 100%
+</small>
+
+</div>
+
+<div class="forecast">
+
+<b>Fri</b>
+&nbsp;&nbsp;
+26.9°/23.9°
+&nbsp;&nbsp;
+🌦️
+
+<br>
+
+<small>
+Rain showers · Rain 100%
+</small>
+
+</div>
+
+<div class="forecast">
+
+<b>Sat</b>
+&nbsp;&nbsp;
+28.4°/23.9°
+&nbsp;&nbsp;
+🌦️
+
+<br>
+
+<small>
+Rain showers · Rain 100%
+</small>
+
+</div>
+
+
+<hr>
+
+<h2>SUN</h2>
+
+<p>
+
+🌅 Sunrise: 06:18
+
+<br>
+
+🌇 Sunset: 19:01
+
+</p>
+
+<hr>
+
+<p>
+
+<small>
+
+Updated: 10 August 2026, 06:40 PM
+
+<br><br>
+
 Weather data provided by Open-Meteo.
-</small></p>
+
+</small>
+
+</p>
 
 </body>
 </html>
 
+
 ]]>
+
 </content:encoded>
 
-<pubDate>Mon, 10 Aug 2026 18:33:50 GMT</pubDate>
+<pubDate>Mon, 10 Aug 2026 18:40:38 GMT</pubDate>
 
-<guid>Sangolda-Weather</guid>
+<guid isPermaLink="false">Sangolda-Weather</guid>
 
 </item>
 
 </channel>
+
 </rss>
