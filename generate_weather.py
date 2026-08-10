@@ -22,74 +22,60 @@ API = (
     "temperature_2m,"
     "relative_humidity_2m,"
     "apparent_temperature,"
-    "precipitation,"
     "weather_code,"
     "wind_speed_10m"
     "&daily="
     "weather_code,"
     "temperature_2m_max,"
     "temperature_2m_min,"
-    "precipitation_probability_max,"
-    "precipitation_sum,"
-    "sunrise,"
-    "sunset"
+    "precipitation_probability_max"
     "&timezone=Asia%2FKolkata"
     "&forecast_days=7"
 )
 
 
 # =========================================================
-# WEATHER CODE → TEXT
+# WEATHER CODE -> TEXT
 # =========================================================
 
 def weather_description(code):
 
     codes = {
-        0: "Clear sky",
+        0: "Clear",
         1: "Mainly clear",
         2: "Partly cloudy",
         3: "Overcast",
-
         45: "Fog",
         48: "Fog",
-
         51: "Light drizzle",
         53: "Drizzle",
         55: "Heavy drizzle",
-
         56: "Freezing drizzle",
         57: "Heavy freezing drizzle",
-
         61: "Light rain",
         63: "Moderate rain",
         65: "Heavy rain",
-
         66: "Freezing rain",
         67: "Heavy freezing rain",
-
         71: "Light snow",
         73: "Moderate snow",
         75: "Heavy snow",
-
         77: "Snow grains",
-
         80: "Rain showers",
-        81: "Moderate rain showers",
-        82: "Heavy rain showers",
-
+        81: "Moderate showers",
+        82: "Heavy showers",
         85: "Snow showers",
         86: "Heavy snow showers",
-
         95: "Thunderstorm",
-        96: "Thunderstorm with hail",
-        99: "Thunderstorm with heavy hail",
+        96: "Thunderstorm + hail",
+        99: "Thunderstorm + heavy hail",
     }
 
     return codes.get(code, "Unknown")
 
 
 # =========================================================
-# DOWNLOAD WEATHER
+# DOWNLOAD WEATHER DATA
 # =========================================================
 
 with urllib.request.urlopen(API) as response:
@@ -104,15 +90,13 @@ daily = data["daily"]
 # DATE
 # =========================================================
 
-today = datetime.fromisoformat(
-    daily["time"][0]
-)
+today = datetime.fromisoformat(daily["time"][0])
 
 today_name = today.strftime("%A")
 today_date = today.strftime("%d %B %Y")
 
 updated = datetime.now().strftime(
-    "%d %B %Y, %I:%M %p"
+    "%d %b %Y, %I:%M %p"
 )
 
 
@@ -126,11 +110,10 @@ current_condition = weather_description(
 
 
 # =========================================================
-# HTML CONTENT
+# HTML
 #
-# Deliberately simple HTML because KOReader converts
-# this RSS article into EPUB and we want it to look good
-# on a 6-inch Kindle screen.
+# Designed specifically for a 6-inch Kindle/PW4.
+# Minimal spacing and no emoji.
 # =========================================================
 
 content = f"""
@@ -146,51 +129,64 @@ content = f"""
 
 body {{
     font-family: serif;
-    font-size: 1.05em;
-    line-height: 1.45;
+    font-size: 0.95em;
+    line-height: 1.25;
     margin: 0;
     padding: 0;
 }}
 
 h1 {{
-    font-size: 1.5em;
+    font-size: 1.35em;
     text-align: center;
-    margin-bottom: 0.2em;
+    margin: 0 0 0.15em 0;
 }}
 
 .date {{
     text-align: center;
-    margin-bottom: 1.2em;
+    margin-bottom: 0.55em;
 }}
 
 h2 {{
-    font-size: 1.2em;
-    margin-top: 1.3em;
-    margin-bottom: 0.4em;
+    font-size: 1.05em;
+    margin: 0.65em 0 0.25em 0;
+    border-bottom: 1px solid #777;
+    padding-bottom: 0.15em;
 }}
 
-.section {{
-    border-top: 1px solid #888;
-    padding-top: 0.7em;
+p {{
+    margin: 0.2em 0;
 }}
 
-.row {{
-    margin: 0.25em 0;
+.current {{
+    text-align: center;
 }}
 
-.day {{
-    margin-top: 0.8em;
-    margin-bottom: 0.1em;
-    font-weight: bold;
+.today {{
+    text-align: center;
 }}
 
-.details {{
-    margin-left: 1em;
+.forecast {{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0.25em;
+    font-size: 0.95em;
+}}
+
+.forecast th {{
+    border-bottom: 1px solid #777;
+    padding: 0.2em;
+    text-align: center;
+}}
+
+.forecast td {{
+    padding: 0.18em 0.2em;
+    text-align: center;
 }}
 
 .footer {{
-    margin-top: 1.5em;
-    font-size: 0.8em;
+    margin-top: 0.65em;
+    text-align: center;
+    font-size: 0.75em;
 }}
 
 </style>
@@ -203,80 +199,61 @@ h2 {{
 <h1>SANGOLDA WEATHER</h1>
 
 <div class="date">
-{today_name}, {today_date}
+<b>{today_name}, {today_date}</b>
 </div>
 
-
-<div class="section">
 
 <h2>CURRENT</h2>
 
+<div class="current">
+
 <p>
+<b>{current["temperature_2m"]}°C</b>
+&nbsp;&nbsp;|&nbsp;&nbsp;
+Feels {current["apparent_temperature"]}°C
+</p>
 
-<div class="row">
-<b>Temperature:</b>
-{current["temperature_2m"]}°C
-</div>
-
-<div class="row">
-<b>Feels like:</b>
-{current["apparent_temperature"]}°C
-</div>
-
-<div class="row">
-<b>Conditions:</b>
+<p>
 {current_condition}
-</div>
-
-<div class="row">
-<b>Humidity:</b>
-{current["relative_humidity_2m"]}%
-</div>
-
-<div class="row">
-<b>Wind:</b>
-{current["wind_speed_10m"]} km/h
-</div>
-
+&nbsp;&nbsp;|&nbsp;&nbsp;
+Humidity {current["relative_humidity_2m"]}%
+&nbsp;&nbsp;|&nbsp;&nbsp;
+Wind {current["wind_speed_10m"]} km/h
 </p>
 
 </div>
 
-
-<div class="section">
 
 <h2>TODAY</h2>
 
+<div class="today">
+
 <p>
+<b>
+High {daily["temperature_2m_max"][0]}°C
+&nbsp;&nbsp;&nbsp;
+Low {daily["temperature_2m_min"][0]}°C
+</b>
+</p>
 
-<div class="row">
-<b>High:</b>
-{daily["temperature_2m_max"][0]}°C
-</div>
-
-<div class="row">
-<b>Low:</b>
-{daily["temperature_2m_min"][0]}°C
-</div>
-
-<div class="row">
-<b>Rain probability:</b>
-{daily["precipitation_probability_max"][0]}%
-</div>
-
-<div class="row">
-<b>Expected rain:</b>
-{daily["precipitation_sum"][0]} mm
-</div>
-
+<p>
+Rain probability:
+<b>{daily["precipitation_probability_max"][0]}%</b>
 </p>
 
 </div>
 
 
-<div class="section">
-
 <h2>NEXT 5 DAYS</h2>
+
+<table class="forecast">
+
+<tr>
+<th>DAY</th>
+<th>HIGH</th>
+<th>LOW</th>
+<th>RAIN</th>
+</tr>
 """
 
 
@@ -295,80 +272,41 @@ for i in range(1, 6):
     high = daily["temperature_2m_max"][i]
     low = daily["temperature_2m_min"][i]
 
-    rain_probability = daily[
+    rain = daily[
         "precipitation_probability_max"
     ][i]
 
-    rain_amount = daily[
-        "precipitation_sum"
-    ][i]
-
-    condition = weather_description(
-        daily["weather_code"][i]
-    )
-
     content += f"""
+<tr>
 
-<div class="day">
+<td><b>{day_name}</b></td>
 
-{day_name} &nbsp;&nbsp; {high}° / {low}°C
+<td>{high}°</td>
 
-</div>
+<td>{low}°</td>
 
-<div class="details">
+<td>{rain}%</td>
 
-{condition}
-
-<br>
-
-Rain probability: {rain_probability}%
-
-<br>
-
-Expected rain: {rain_amount} mm
-
-</div>
-
+</tr>
 """
 
 
 # =========================================================
-# SUNRISE / SUNSET
+# CLOSE TABLE + FOOTER
 # =========================================================
-
-sunrise = daily["sunrise"][0][11:16]
-sunset = daily["sunset"][0][11:16]
-
 
 content += f"""
 
-</div>
-
-
-<div class="section">
-
-<h2>SUN</h2>
-
-<p>
-
-<b>Sunrise:</b> {sunrise}
-
-<br>
-
-<b>Sunset:</b> {sunset}
-
-</p>
-
-</div>
+</table>
 
 
 <div class="footer">
 
-Updated: {updated}
+Updated {updated}
 
-<br><br>
+<br>
 
-Weather data provided by Open-Meteo.
+Weather: Open-Meteo
 
 </div>
 
@@ -395,7 +333,7 @@ rss_description = html.escape(description)
 
 
 # =========================================================
-# RSS PUBLICATION DATE
+# RSS DATE
 # =========================================================
 
 now = datetime.now(timezone.utc)
@@ -409,7 +347,7 @@ pub_date = now.strftime(
 # RSS XML
 #
 # IMPORTANT:
-# KOReader requires <link> inside <item>.
+# The <link> inside <item> is required by KOReader.
 # =========================================================
 
 rss = f'''<?xml version="1.0" encoding="UTF-8"?>
@@ -426,7 +364,6 @@ xmlns:content="http://purl.org/rss/1.0/modules/content/">
 <description>{rss_description}</description>
 
 <language>en</language>
-
 
 <item>
 
@@ -448,12 +385,9 @@ xmlns:content="http://purl.org/rss/1.0/modules/content/">
 
 <pubDate>{pub_date}</pubDate>
 
-<guid isPermaLink="false">
-Sangolda-Weather
-</guid>
+<guid isPermaLink="false">Sangolda-Weather</guid>
 
 </item>
-
 
 </channel>
 
@@ -474,6 +408,4 @@ with open(
     f.write(rss)
 
 
-print(
-    "Sangolda weather RSS generated successfully."
-)
+print("Sangolda weather RSS generated successfully.")
