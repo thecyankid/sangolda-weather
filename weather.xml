@@ -117,17 +117,17 @@ p {
 <div class="current">
 
 <p>
-<b>24.3°C</b>
+<b>25.3°C</b>
 &nbsp;&nbsp;|&nbsp;&nbsp;
-Feels 29.6°C
+Feels 31.5°C
 </p>
 
 <p>
-Light drizzle
+Drizzle
 &nbsp;&nbsp;|&nbsp;&nbsp;
-Humidity 98%
+Humidity 95%
 &nbsp;&nbsp;|&nbsp;&nbsp;
-Wind 4.8 km/h
+Wind 0.7 km/h
 </p>
 
 </div>
@@ -139,9 +139,9 @@ Wind 4.8 km/h
 
 <p>
 <b>
-High 27.3°C
+High 27.9°C
 &nbsp;&nbsp;&nbsp;
-Low 23.9°C
+Low 24.3°C
 </b>
 </p>
 
@@ -168,9 +168,9 @@ Rain probability:
 
 <td><b>Thu</b></td>
 
-<td>26.7°</td>
+<td>27.3°</td>
 
-<td>24.4°</td>
+<td>24.2°</td>
 
 <td>100%</td>
 
@@ -180,7 +180,7 @@ Rain probability:
 
 <td><b>Fri</b></td>
 
-<td>27.8°</td>
+<td>27.6°</td>
 
 <td>23.8°</td>
 
@@ -192,9 +192,9 @@ Rain probability:
 
 <td><b>Sat</b></td>
 
-<td>28.6°</td>
+<td>28.4°</td>
 
-<td>23.3°</td>
+<td>24.1°</td>
 
 <td>100%</td>
 
@@ -204,11 +204,11 @@ Rain probability:
 
 <td><b>Sun</b></td>
 
-<td>28.6°</td>
+<td>28.8°</td>
 
 <td>23.9°</td>
 
-<td>100%</td>
+<td>99%</td>
 
 </tr>
 
@@ -216,9 +216,9 @@ Rain probability:
 
 <td><b>Mon</b></td>
 
-<td>25.7°</td>
+<td>27.3°</td>
 
-<td>24.0°</td>
+<td>24.2°</td>
 
 <td>100%</td>
 
@@ -230,7 +230,7 @@ Rain probability:
 
 <div class="footer">
 
-Updated 12 Aug 2026, 12:06 AM
+Updated 12 Aug 2026, 03:04 AM
 
 <br>
 
@@ -248,7 +248,7 @@ Weather: Open-Meteo
 
 </content:encoded>
 
-<pubDate>Wed, 12 Aug 2026 00:06:44 GMT</pubDate>
+<pubDate>Wed, 12 Aug 2026 03:04:00 GMT</pubDate>
 
 <guid isPermaLink="false">Sangolda-Weather</guid>
 
