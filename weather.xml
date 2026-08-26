@@ -117,17 +117,17 @@ p {
 <div class="current">
 
 <p>
-<b>27.6°C</b>
+<b>27.1°C</b>
 &nbsp;&nbsp;|&nbsp;&nbsp;
-Feels 31.4°C
+Feels 30.9°C
 </p>
 
 <p>
-Clear
+Mainly clear
 &nbsp;&nbsp;|&nbsp;&nbsp;
-Humidity 82%
+Humidity 85%
 &nbsp;&nbsp;|&nbsp;&nbsp;
-Wind 17.2 km/h
+Wind 16.5 km/h
 </p>
 
 </div>
@@ -196,7 +196,7 @@ Rain probability:
 
 <td>24.3°</td>
 
-<td>98%</td>
+<td>95%</td>
 
 </tr>
 
@@ -208,7 +208,7 @@ Rain probability:
 
 <td>24.9°</td>
 
-<td>98%</td>
+<td>97%</td>
 
 </tr>
 
@@ -220,7 +220,7 @@ Rain probability:
 
 <td>24.1°</td>
 
-<td>100%</td>
+<td>96%</td>
 
 </tr>
 
@@ -230,7 +230,7 @@ Rain probability:
 
 <div class="footer">
 
-Updated 26 Aug 2026, 01:33 PM
+Updated 26 Aug 2026, 03:59 PM
 
 <br>
 
@@ -248,7 +248,7 @@ Weather: Open-Meteo
 
 </content:encoded>
 
-<pubDate>Wed, 26 Aug 2026 13:33:17 GMT</pubDate>
+<pubDate>Wed, 26 Aug 2026 15:59:21 GMT</pubDate>
 
 <guid isPermaLink="false">Sangolda-Weather</guid>
 
