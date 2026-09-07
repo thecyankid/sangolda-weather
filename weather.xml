@@ -117,17 +117,17 @@ p {
 <div class="current">
 
 <p>
-<b>25.2°C</b>
+<b>27.8°C</b>
 &nbsp;&nbsp;|&nbsp;&nbsp;
-Feels 30.9°C
+Feels 33.6°C
 </p>
 
 <p>
-Partly cloudy
+Clear
 &nbsp;&nbsp;|&nbsp;&nbsp;
-Humidity 93%
+Humidity 82%
 &nbsp;&nbsp;|&nbsp;&nbsp;
-Wind 2.3 km/h
+Wind 7.6 km/h
 </p>
 
 </div>
@@ -141,13 +141,13 @@ Wind 2.3 km/h
 <b>
 High 28.5°C
 &nbsp;&nbsp;&nbsp;
-Low 24.9°C
+Low 24.8°C
 </b>
 </p>
 
 <p>
 Rain probability:
-<b>92%</b>
+<b>90%</b>
 </p>
 
 </div>
@@ -168,11 +168,11 @@ Rain probability:
 
 <td><b>Tue</b></td>
 
-<td>28.1°</td>
+<td>27.9°</td>
 
-<td>24.4°</td>
+<td>24.7°</td>
 
-<td>95%</td>
+<td>92%</td>
 
 </tr>
 
@@ -180,11 +180,11 @@ Rain probability:
 
 <td><b>Wed</b></td>
 
-<td>28.7°</td>
+<td>28.5°</td>
 
-<td>24.6°</td>
+<td>25.0°</td>
 
-<td>98%</td>
+<td>97%</td>
 
 </tr>
 
@@ -192,11 +192,11 @@ Rain probability:
 
 <td><b>Thu</b></td>
 
-<td>29.4°</td>
+<td>29.6°</td>
 
-<td>25.2°</td>
+<td>25.1°</td>
 
-<td>96%</td>
+<td>95%</td>
 
 </tr>
 
@@ -204,9 +204,9 @@ Rain probability:
 
 <td><b>Fri</b></td>
 
-<td>29.2°</td>
+<td>29.6°</td>
 
-<td>25.2°</td>
+<td>25.4°</td>
 
 <td>81%</td>
 
@@ -216,11 +216,11 @@ Rain probability:
 
 <td><b>Sat</b></td>
 
-<td>29.1°</td>
+<td>29.3°</td>
 
-<td>25.2°</td>
+<td>25.0°</td>
 
-<td>84%</td>
+<td>86%</td>
 
 </tr>
 
@@ -230,7 +230,7 @@ Rain probability:
 
 <div class="footer">
 
-Updated 07 Sep 2026, 12:11 AM
+Updated 07 Sep 2026, 05:02 AM
 
 <br>
 
@@ -248,7 +248,7 @@ Weather: Open-Meteo
 
 </content:encoded>
 
-<pubDate>Mon, 07 Sep 2026 00:11:00 GMT</pubDate>
+<pubDate>Mon, 07 Sep 2026 05:02:09 GMT</pubDate>
 
 <guid isPermaLink="false">Sangolda-Weather</guid>
 
