@@ -108,7 +108,7 @@ p {
 <h1>SANGOLDA WEATHER</h1>
 
 <div class="date">
-<b>Friday, 11 September 2026</b>
+<b>Saturday, 12 September 2026</b>
 </div>
 
 
@@ -117,17 +117,17 @@ p {
 <div class="current">
 
 <p>
-<b>26.5°C</b>
+<b>25.8°C</b>
 &nbsp;&nbsp;|&nbsp;&nbsp;
-Feels 31.0°C
+Feels 30.5°C
 </p>
 
 <p>
-Partly cloudy
+Overcast
 &nbsp;&nbsp;|&nbsp;&nbsp;
-Humidity 86%
+Humidity 89%
 &nbsp;&nbsp;|&nbsp;&nbsp;
-Wind 10.6 km/h
+Wind 9.2 km/h
 </p>
 
 </div>
@@ -139,15 +139,15 @@ Wind 10.6 km/h
 
 <p>
 <b>
-High 29.9°C
+High 29.0°C
 &nbsp;&nbsp;&nbsp;
-Low 25.7°C
+Low 25.3°C
 </b>
 </p>
 
 <p>
 Rain probability:
-<b>92%</b>
+<b>88%</b>
 </p>
 
 </div>
@@ -162,18 +162,6 @@ Rain probability:
 <th>HIGH</th>
 <th>LOW</th>
 <th>RAIN</th>
-</tr>
-
-<tr>
-
-<td><b>Sat</b></td>
-
-<td>29.0°</td>
-
-<td>25.3°</td>
-
-<td>88%</td>
-
 </tr>
 
 <tr>
@@ -224,13 +212,25 @@ Rain probability:
 
 </tr>
 
+<tr>
+
+<td><b>Thu</b></td>
+
+<td>29.6°</td>
+
+<td>25.1°</td>
+
+<td>94%</td>
+
+</tr>
+
 
 </table>
 
 
 <div class="footer">
 
-Updated 11 Sep 2026, 06:41 PM
+Updated 11 Sep 2026, 09:50 PM
 
 <br>
 
@@ -248,7 +248,7 @@ Weather: Open-Meteo
 
 </content:encoded>
 
-<pubDate>Fri, 11 Sep 2026 18:41:37 GMT</pubDate>
+<pubDate>Fri, 11 Sep 2026 21:50:08 GMT</pubDate>
 
 <guid isPermaLink="false">Sangolda-Weather</guid>
 
