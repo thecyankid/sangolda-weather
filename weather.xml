@@ -117,17 +117,17 @@ p {
 <div class="current">
 
 <p>
-<b>25.8°C</b>
+<b>24.4°C</b>
 &nbsp;&nbsp;|&nbsp;&nbsp;
-Feels 30.8°C
+Feels 29.3°C
 </p>
 
 <p>
-Drizzle
+Thunderstorm
 &nbsp;&nbsp;|&nbsp;&nbsp;
-Humidity 93%
+Humidity 98%
 &nbsp;&nbsp;|&nbsp;&nbsp;
-Wind 9.6 km/h
+Wind 8.1 km/h
 </p>
 
 </div>
@@ -230,7 +230,7 @@ Rain probability:
 
 <div class="footer">
 
-Updated 23 Sep 2026, 08:35 PM
+Updated 23 Sep 2026, 11:51 PM
 
 <br>
 
@@ -248,7 +248,7 @@ Weather: Open-Meteo
 
 </content:encoded>
 
-<pubDate>Wed, 23 Sep 2026 20:35:46 GMT</pubDate>
+<pubDate>Wed, 23 Sep 2026 23:51:13 GMT</pubDate>
 
 <guid isPermaLink="false">Sangolda-Weather</guid>
 
