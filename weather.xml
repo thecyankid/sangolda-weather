@@ -117,17 +117,17 @@ p {
 <div class="current">
 
 <p>
-<b>27.6°C</b>
+<b>25.4°C</b>
 &nbsp;&nbsp;|&nbsp;&nbsp;
-Feels 32.4°C
+Feels 29.6°C
 </p>
 
 <p>
-Overcast
+Light drizzle
 &nbsp;&nbsp;|&nbsp;&nbsp;
-Humidity 82%
+Humidity 93%
 &nbsp;&nbsp;|&nbsp;&nbsp;
-Wind 9.7 km/h
+Wind 14.1 km/h
 </p>
 
 </div>
@@ -147,7 +147,7 @@ Low 23.4°C
 
 <p>
 Rain probability:
-<b>80%</b>
+<b>90%</b>
 </p>
 
 </div>
@@ -172,7 +172,7 @@ Rain probability:
 
 <td>25.0°</td>
 
-<td>90%</td>
+<td>92%</td>
 
 </tr>
 
@@ -184,7 +184,7 @@ Rain probability:
 
 <td>24.6°</td>
 
-<td>73%</td>
+<td>63%</td>
 
 </tr>
 
@@ -196,7 +196,7 @@ Rain probability:
 
 <td>24.2°</td>
 
-<td>73%</td>
+<td>69%</td>
 
 </tr>
 
@@ -208,7 +208,7 @@ Rain probability:
 
 <td>24.7°</td>
 
-<td>94%</td>
+<td>100%</td>
 
 </tr>
 
@@ -220,7 +220,7 @@ Rain probability:
 
 <td>24.5°</td>
 
-<td>90%</td>
+<td>87%</td>
 
 </tr>
 
@@ -230,7 +230,7 @@ Rain probability:
 
 <div class="footer">
 
-Updated 25 Sep 2026, 02:03 PM
+Updated 25 Sep 2026, 06:47 PM
 
 <br>
 
@@ -248,7 +248,7 @@ Weather: Open-Meteo
 
 </content:encoded>
 
-<pubDate>Fri, 25 Sep 2026 14:03:07 GMT</pubDate>
+<pubDate>Fri, 25 Sep 2026 18:47:47 GMT</pubDate>
 
 <guid isPermaLink="false">Sangolda-Weather</guid>
 
