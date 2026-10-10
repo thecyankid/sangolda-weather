@@ -108,7 +108,7 @@ p {
 <h1>SANGOLDA WEATHER</h1>
 
 <div class="date">
-<b>Saturday, 10 October 2026</b>
+<b>Sunday, 11 October 2026</b>
 </div>
 
 
@@ -117,17 +117,17 @@ p {
 <div class="current">
 
 <p>
-<b>30.2°C</b>
+<b>28.2°C</b>
 &nbsp;&nbsp;|&nbsp;&nbsp;
-Feels 36.6°C
+Feels 35.2°C
 </p>
 
 <p>
 Clear
 &nbsp;&nbsp;|&nbsp;&nbsp;
-Humidity 76%
+Humidity 90%
 &nbsp;&nbsp;|&nbsp;&nbsp;
-Wind 4.2 km/h
+Wind 4.0 km/h
 </p>
 
 </div>
@@ -139,15 +139,15 @@ Wind 4.2 km/h
 
 <p>
 <b>
-High 34.7°C
+High 35.3°C
 &nbsp;&nbsp;&nbsp;
-Low 26.4°C
+Low 25.9°C
 </b>
 </p>
 
 <p>
 Rain probability:
-<b>18%</b>
+<b>7%</b>
 </p>
 
 </div>
@@ -166,25 +166,13 @@ Rain probability:
 
 <tr>
 
-<td><b>Sun</b></td>
-
-<td>34.8°</td>
-
-<td>25.7°</td>
-
-<td>15%</td>
-
-</tr>
-
-<tr>
-
 <td><b>Mon</b></td>
 
-<td>35.6°</td>
+<td>35.2°</td>
 
-<td>25.3°</td>
+<td>25.4°</td>
 
-<td>10%</td>
+<td>16%</td>
 
 </tr>
 
@@ -192,9 +180,9 @@ Rain probability:
 
 <td><b>Tue</b></td>
 
-<td>37.3°</td>
+<td>36.7°</td>
 
-<td>24.2°</td>
+<td>24.3°</td>
 
 <td>0%</td>
 
@@ -204,9 +192,9 @@ Rain probability:
 
 <td><b>Wed</b></td>
 
-<td>36.1°</td>
+<td>36.0°</td>
 
-<td>24.3°</td>
+<td>24.7°</td>
 
 <td>2%</td>
 
@@ -216,11 +204,23 @@ Rain probability:
 
 <td><b>Thu</b></td>
 
-<td>32.1°</td>
+<td>34.0°</td>
 
-<td>26.0°</td>
+<td>26.5°</td>
 
-<td>17%</td>
+<td>19%</td>
+
+</tr>
+
+<tr>
+
+<td><b>Fri</b></td>
+
+<td>32.0°</td>
+
+<td>26.2°</td>
+
+<td>45%</td>
 
 </tr>
 
@@ -230,7 +230,7 @@ Rain probability:
 
 <div class="footer">
 
-Updated 10 Oct 2026, 02:35 PM
+Updated 10 Oct 2026, 07:25 PM
 
 <br>
 
@@ -248,7 +248,7 @@ Weather: Open-Meteo
 
 </content:encoded>
 
-<pubDate>Sat, 10 Oct 2026 14:35:14 GMT</pubDate>
+<pubDate>Sat, 10 Oct 2026 19:25:46 GMT</pubDate>
 
 <guid isPermaLink="false">Sangolda-Weather</guid>
 
