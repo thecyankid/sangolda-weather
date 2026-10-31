@@ -108,7 +108,7 @@ p {
 <h1>SANGOLDA WEATHER</h1>
 
 <div class="date">
-<b>Saturday, 31 October 2026</b>
+<b>Sunday, 01 November 2026</b>
 </div>
 
 
@@ -117,17 +117,17 @@ p {
 <div class="current">
 
 <p>
-<b>28.1°C</b>
+<b>26.3°C</b>
 &nbsp;&nbsp;|&nbsp;&nbsp;
-Feels 31.9°C
+Feels 30.4°C
 </p>
 
 <p>
-Partly cloudy
+Mainly clear
 &nbsp;&nbsp;|&nbsp;&nbsp;
-Humidity 73%
+Humidity 81%
 &nbsp;&nbsp;|&nbsp;&nbsp;
-Wind 10.7 km/h
+Wind 8.3 km/h
 </p>
 
 </div>
@@ -139,15 +139,15 @@ Wind 10.7 km/h
 
 <p>
 <b>
-High 32.4°C
+High 32.7°C
 &nbsp;&nbsp;&nbsp;
-Low 24.6°C
+Low 24.1°C
 </b>
 </p>
 
 <p>
 Rain probability:
-<b>4%</b>
+<b>53%</b>
 </p>
 
 </div>
@@ -162,18 +162,6 @@ Rain probability:
 <th>HIGH</th>
 <th>LOW</th>
 <th>RAIN</th>
-</tr>
-
-<tr>
-
-<td><b>Sun</b></td>
-
-<td>32.7°</td>
-
-<td>24.1°</td>
-
-<td>53%</td>
-
 </tr>
 
 <tr>
@@ -224,13 +212,25 @@ Rain probability:
 
 </tr>
 
+<tr>
+
+<td><b>Fri</b></td>
+
+<td>32.2°</td>
+
+<td>24.2°</td>
+
+<td>45%</td>
+
+</tr>
+
 
 </table>
 
 
 <div class="footer">
 
-Updated 31 Oct 2026, 03:27 PM
+Updated 31 Oct 2026, 07:28 PM
 
 <br>
 
@@ -248,7 +248,7 @@ Weather: Open-Meteo
 
 </content:encoded>
 
-<pubDate>Sat, 31 Oct 2026 15:27:11 GMT</pubDate>
+<pubDate>Sat, 31 Oct 2026 19:28:31 GMT</pubDate>
 
 <guid isPermaLink="false">Sangolda-Weather</guid>
 
