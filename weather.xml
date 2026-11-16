@@ -117,17 +117,17 @@ p {
 <div class="current">
 
 <p>
-<b>23.6°C</b>
+<b>24.6°C</b>
 &nbsp;&nbsp;|&nbsp;&nbsp;
-Feels 24.7°C
+Feels 26.4°C
 </p>
 
 <p>
 Overcast
 &nbsp;&nbsp;|&nbsp;&nbsp;
-Humidity 66%
+Humidity 67%
 &nbsp;&nbsp;|&nbsp;&nbsp;
-Wind 9.2 km/h
+Wind 6.9 km/h
 </p>
 
 </div>
@@ -139,9 +139,9 @@ Wind 9.2 km/h
 
 <p>
 <b>
-High 31.8°C
+High 31.7°C
 &nbsp;&nbsp;&nbsp;
-Low 22.4°C
+Low 22.1°C
 </b>
 </p>
 
@@ -168,7 +168,7 @@ Rain probability:
 
 <td><b>Tue</b></td>
 
-<td>32.3°</td>
+<td>32.8°</td>
 
 <td>21.0°</td>
 
@@ -180,7 +180,7 @@ Rain probability:
 
 <td><b>Wed</b></td>
 
-<td>35.2°</td>
+<td>35.1°</td>
 
 <td>21.2°</td>
 
@@ -192,9 +192,9 @@ Rain probability:
 
 <td><b>Thu</b></td>
 
-<td>35.1°</td>
+<td>34.9°</td>
 
-<td>22.9°</td>
+<td>22.3°</td>
 
 <td>4%</td>
 
@@ -204,9 +204,9 @@ Rain probability:
 
 <td><b>Fri</b></td>
 
-<td>34.3°</td>
+<td>33.9°</td>
 
-<td>22.7°</td>
+<td>22.3°</td>
 
 <td>18%</td>
 
@@ -216,9 +216,9 @@ Rain probability:
 
 <td><b>Sat</b></td>
 
-<td>30.5°</td>
+<td>30.7°</td>
 
-<td>20.5°</td>
+<td>20.4°</td>
 
 <td>24%</td>
 
@@ -230,7 +230,7 @@ Rain probability:
 
 <div class="footer">
 
-Updated 15 Nov 2026, 11:02 PM
+Updated 16 Nov 2026, 02:56 AM
 
 <br>
 
@@ -248,7 +248,7 @@ Weather: Open-Meteo
 
 </content:encoded>
 
-<pubDate>Sun, 15 Nov 2026 23:02:51 GMT</pubDate>
+<pubDate>Mon, 16 Nov 2026 02:56:16 GMT</pubDate>
 
 <guid isPermaLink="false">Sangolda-Weather</guid>
 
